@@ -11,19 +11,23 @@
                     <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label for="name">Автор книги</label>
+                    <input type="text" name="name_author" placeholder="Введіть автора" id="name_author" class="form-control">
+                </div>
+                <div class="form-group">
                     <label for="name">Жанр книги</label>
                     <input type="text" name="genre" placeholder="Введіть жанр книги" id="genre" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="name">Автор книги</label>
-                    <input type="text" name="name_author" placeholder="Введіть автора" id="name_author" class="form-control">
+                    <label for="name">Рік книги</label>
+                    <input type="text" name="year" placeholder="Введіть рік книги" id="year" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="message">Введіть текст повідомлення</label>
                     <textarea name="message" id="message" class="form-control" placeholder="Введіть текст повідомлення"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-success">Додати</button>
+                <button type="button" class="btn btn-success">Додати</button>
                 <button type="button" class="btn btn-info">Редагувати</button>
             </form>
         </div>

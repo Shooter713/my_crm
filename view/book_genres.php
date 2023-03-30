@@ -9,7 +9,7 @@
             <input type="text" name="genre" placeholder="Введіть назву жанру книги" id="genre" class="form-control">
         </div>
 
-        <button type="submit" class="btn btn-success">Додати</button>
+        <button type="button" class="btn btn-success">Додати</button>
         <button type="button" class="btn btn-info">Редагувати</button>
     </form>
 </div>

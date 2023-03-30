@@ -1,7 +1,9 @@
 <?php
-//    require_once('Controller/LibraryController.php');
-//    $list = new LibraryController();
-//    var_dump($list->index());
+    require_once('Model/Model.php');
+    $list = new Model();
+    echo '<pre>';
+    var_dump($list->sql("SELECT * FROM `users`;"));
+    echo '</pre>';
 ?>
 <?php include 'view/include/layout.php'?>
 <body>
