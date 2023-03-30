@@ -1,10 +1,3 @@
-<?php
-    require_once('Model/Model.php');
-    $list = new Model();
-    echo '<pre>';
-    var_dump($list->sql("SELECT * FROM `users`;"));
-    echo '</pre>';
-?>
 <?php include 'view/include/layout.php'?>
 <body>
 <?php include 'view/include/header.php'?>

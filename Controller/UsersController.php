@@ -1,11 +1,14 @@
 <?php
+namespace Controller;
+require_once ('../Model/User.php');
+
+
 Class UsersController
 {
-    public function index()
+    public static function index()
     {
-
-        return "Index";
-
+        $user = new User();
+        return $user->getAllUsers();
     }
 
     public function lists()
@@ -13,7 +16,7 @@ Class UsersController
         return "List";
     }
 
-    public function addUser()
+    public static function addUser()
     {
         return "addUser";
     }
