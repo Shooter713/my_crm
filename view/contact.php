@@ -6,7 +6,6 @@
 //    require_once ('../Controller/UsersController.php');
 //    $users = UsersController::index();
 //    var_dump($users);
-
 ?>
 
     <div class="row no-gutters">
@@ -15,7 +14,7 @@
         </div>
         <div class="col-md-7">
             <div class="container pt-md-5">
-                <form action="#" method="post">
+                <form action="../handler.php" method="post">
                     <div class="form-group">
                         <label for="name">Введіть ім'я</label>
                         <input type="text" name="name" placeholder="Введіть ім'я" id="name" class="form-control">
@@ -32,40 +31,12 @@
                         <label for="telephone">Введіть номер телефону</label>
                         <input name="telephone" placeholder="Введіть телефон" id="telephone" class="form-control">
                     </div>
-                    <button type="button" class="btn btn-success" id="addNewUser">Додати</button>
+                    <button type="submit" class="btn btn-success" id="addNewUser">Додати</button>
                     <button type="button" class="btn btn-info">Редагувати</button>
                 </form>
             </div>
         </div>
     </div>
-
-<script>
-
-    $(document).ready(function (){
-        $(document).on('click','#addNewUser',function (){
-            $.ajax({
-                url:'/handler.php',
-                dataType: 'JSON',
-                type: 'GET',
-                data:{
-                    text: 're',
-                    method: 'add_new_user'
-                },
-                success: function (data) {
-                    console.log("save")
-                    console.log(data)
-                    console.log('addNewUser')
-                },
-                error: function (data) {
-                    console.log("error")
-                    console.log(data)
-                    console.log('noAddNewUser')
-                }
-            });
-        })
-    })
-
-</script>
 
 <?php include 'include/footer.php'?>
 

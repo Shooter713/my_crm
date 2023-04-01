@@ -17,6 +17,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/view/users_list.php">Записи</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/view/test_form.php">Тестова форма</a>
+            </li>
         </ul>
     </div>
 </nav>

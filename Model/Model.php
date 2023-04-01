@@ -9,22 +9,25 @@ Class Model
 
     public function __construct()
     {
-        $this->host_name = 'localhost';
-        $this->user_name = 'root';
-        $this->database  = 'my_crm';
-        $this->password  = '';
-        $this->db_handle = mysqli_connect($this->host_name, $this->user_name, $this->password);
-        mysqli_select_db($this->db_handle, $this->database) or die(mysqli_error());
+
+
+
+//        $this->host_name = 'localhost';
+//        $this->user_name = 'root';
+//        $this->database  = 'my_crm';
+//        $this->password  = '';
+//        $this->db_handle = mysqli_connect($this->host_name, $this->user_name, $this->password);
+//        mysqli_select_db($this->db_handle, $this->database) or die(mysqli_error());
     }
 
-    public function sql($query)
-    {
-        $data = [];
-        $result = mysqli_query($this->db_handle, $query);
-        while ($row = mysqli_fetch_assoc($result)){
-            $data[] = $row;
-        }
-        return $data;
-    }
+//    public function sql($query)
+//    {
+//        $data = [];
+//        $result = mysqli_query($this->db_handle, $query);
+//        while ($row = mysqli_fetch_assoc($result)){
+//            $data[] = $row;
+//        }
+//        return $data;
+//    }
 
 }
