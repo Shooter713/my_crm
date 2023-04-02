@@ -1,6 +1,7 @@
 $(document).ready(function (){
 
     $(document).on('click', '.edit-user', function (){
+       $('#addNewUser').css('display', 'none');
        var user_id = $(this).attr('data-element-id');
        var user = document.querySelector('.user-'+user_id);
 

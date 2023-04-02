@@ -8,19 +8,23 @@ include 'include/header.php';
 
 $users = UsersController::index();
 ?>
-
     <div class="row no-gutters">
         <div class="col-md-5 pt-md-5">
             <?php foreach ($users as $user){ ?>
-                <div class="user-item user-<?php echo $user['id']; ?>">
-                    <div class="id"><?php echo $user['id']; ?></div>
-                    <div class="name"><?php echo $user['name']; ?></div>
-                    <div class="last_name"><?php echo $user['last_name']; ?></div>
-                    <div class="email"><?php echo $user['email']; ?></div>
-                    <div class="telephone"><?php echo $user['telephone']; ?></div>
-                    <button class="btn btn-primary edit-user" data-element-id="<?php echo $user['id']; ?>">Edit USer</button>
+                <div class="alert alert-info">
+                    <div class="user-item user-<?php echo $user['id']; ?>">
+                        <li class="id"><?php echo $user['id']; ?></li>
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <li class="name"><?php echo $user['name']; ?></li>
+                                <div class="last_name mx-2"><?php echo $user['last_name']; ?></div>
+                            </div>
+                        </div>
+                        <li class="email"><?php echo $user['email']; ?></li>
+                        <li class="telephone"><?php echo $user['telephone']; ?></li>
+                        <button class="btn btn-info mt-3 edit-user" data-element-id="<?php echo $user['id']; ?>">Редагувати</button>
+                    </div>
                 </div>
-
             <?php  } ?>
         </div>
         <div class="col-md-7">
