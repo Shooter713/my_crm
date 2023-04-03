@@ -30,8 +30,7 @@ Class User
     public function editUser($data)
     {
         return $this->db->mysqliQuery(
-            "UPDATE `users` SET `name` = '".$data['name']."', `last_name` = '".$data['last_name']."', `email` = '".$data['email']."', `telephone` = '".$data['telephone']."', `updated_at` = '".date('Y-m-d H:i:s')."' WHERE `users`.`id` = '".$data['user_id']."'"
+            "UPDATE `$this->table` SET `name` = '".$data['name']."', `last_name` = '".$data['last_name']."', `email` = '".$data['email']."', `telephone` = '".$data['telephone']."', `updated_at` = '".date('Y-m-d H:i:s')."' WHERE `users`.`id` = '".$data['user_id']."'"
         );
     }
-
 }

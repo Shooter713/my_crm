@@ -1,5 +1,4 @@
 $(document).ready(function (){
-
     $(document).on('click', '.edit-user', function (){
        $('#addNewUser').css('display', 'none');
        var user_id = $(this).attr('data-element-id');
@@ -18,4 +17,16 @@ $(document).ready(function (){
        $('#telephone').val(telephone);
        $('#method_name').val('editUser');
     });
+})
+
+$(document).ready(function (){
+   $(document).on('click', '.edit-genre', function (){
+      $('.add-new-genre').css('display', 'none');
+      var genre_id = $(this).attr('data-element-id');
+      var name = $(this).attr('data-element-name');
+
+      $('#genre_id').val(genre_id);
+      $('#genre').val(name);
+      $('#method_name').val('editGenre');
+   });
 })
