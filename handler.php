@@ -34,12 +34,15 @@ if ($method == 'addUser'){
     echo json_encode(array('success'=> $genre));
     header('location: /view/book_genres.php');
 }else if($method == 'addBook'){
-//    echo '<pre>';
-//    var_dump($_POST);
-//    echo '</pre>';
     $controller = new BooksController();
 
     $book = $controller::addBook($_POST);
+    echo json_encode(array('success'=> $book));
+    header('location: /');
+}else if($method == 'editBook'){
+    $controller = new BooksController();
+
+    $book = $controller::editBook($_POST);
     echo json_encode(array('success'=> $book));
     header('location: /');
 }

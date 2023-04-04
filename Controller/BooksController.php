@@ -17,4 +17,10 @@ Class BooksController
         $book = new Books();
         return $book->addBook($data);
     }
+
+    public static function editBook($data)
+    {
+        $book = new Books();
+        return $book->editBook($data);
+    }
 }

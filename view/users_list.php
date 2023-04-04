@@ -12,10 +12,6 @@
                     <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="genre">Жанр книги</label>
-                    <input type="text" name="genre" placeholder="Введіть назву жанру книги" id="genre" class="form-control">
-                </div>
-                <div class="form-group">
                     <label for="name">Кому видано</label>
                     <input type="text" name="name" placeholder="Введіть ім'я" id="name" class="form-control">
                 </div>
@@ -32,14 +28,6 @@
                 <div class="form-group">
                     <label for="name_book">Назва книги</label>
                     <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="genre">Жанр книги</label>
-                    <input type="text" name="genre" placeholder="Введіть назву жанру книги" id="genre" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="name">Хто повертає</label>
-                    <input type="text" name="name" placeholder="Введіть ім'я" id="name" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="date">Дата Повернення</label>

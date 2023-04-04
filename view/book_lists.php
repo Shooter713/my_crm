@@ -18,6 +18,7 @@ $genre = GenreController::index();
                 <div class="form-group">
                     <label for="name">Назва книги</label>
                     <input type="hidden" name="method_name" id="method_name" value="addBook">
+                    <input type="hidden" name="book_id" id="book_id">
                     <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control">
                 </div>
                 <div class="form-group">
@@ -37,11 +38,7 @@ $genre = GenreController::index();
                     <label for="name">Рік книги</label>
                     <input type="text" name="year" placeholder="Введіть рік книги" id="year" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label for="message">Введіть текст повідомлення</label>
-                    <textarea name="message" id="message" class="form-control" placeholder="Введіть текст повідомлення"></textarea>
-                </div>
-                <button type="submit" class="btn btn-success" id="addBook">Додати</button>
+                <button type="submit" class="btn btn-success" onclick="$('#method_name').val('addBook');" id="addBook">Додати</button>
                 <button type="submit" class="btn btn-info">Редагувати</button>
             </form>
         </div>
@@ -49,13 +46,12 @@ $genre = GenreController::index();
             <p>Список книг</p>
             <?php foreach ($books as $book){ ?>
                 <div class="alert alert-info">
-                    <div class="genre-item genre-<?php echo $book['id']?>">
+                    <div class="book-item book-<?php echo $book['id']?>">
                         <li><?php echo $book['id']?> - <?php echo $book['name']?></li>
-                        <li><?php echo $book['author']?></li>
-                        <li><?php echo $book['year']?></li>
-                        <li><?php echo $book['text']?></li>
-                        <li><?php echo $book['genre_id']?></li>
-                        <button class="btn btn-info mt-3 edit-genre" id="genre_id" data-element-name="<?php echo $book['name']?>" data-element-id="<?php echo $gen['id']?>">Редагувати</button>
+                        <li class="author"><?php echo $book['author']?></li>
+                        <li class="year"><?php echo $book['year']?></li>
+                        <li class="genre_name"><?php echo $book['genre_name']?></li>
+                        <button class="btn btn-info mt-3 edit-book" data-element-name="<?php echo $book['name']?>" data-element-id="<?php echo $book['id']?>">Редагувати</button>
                     </div>
                 </div>
             <?php } ?>
