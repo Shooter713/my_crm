@@ -12,6 +12,12 @@ Class BooksController
         return $book->getAllBooks();
     }
 
+    public static function getBooksInStock()
+    {
+        $book = new Books();
+        return $book->getBooksInStock();
+    }
+
     public static function addBook($data)
     {
         $book = new Books();

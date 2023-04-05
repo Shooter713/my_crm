@@ -2,49 +2,39 @@
 require_once ('Controller/UsersController.php');
 require_once ('Controller/GenreController.php');
 require_once ('Controller/BooksController.php');
+require_once ('Controller/ListController.php');
 
 use Controller\UsersController;
 use Controller\GenreController;
 use Controller\BooksController;
+use Controller\ListController;
 
 $method = $_POST['method_name'];
 
 if ($method == 'addUser'){
-    $controller = new UsersController();
-
-    $user = $controller::addUser($_POST);
-    echo json_encode(array('success'=> $user));
+    UsersController::addUser($_POST);
     header('location: /view/contact.php');
 }else if($method == 'editUser'){
-    $controller = new UsersController();
-
-    $user = $controller::editUser($_POST);
-    echo json_encode(array('success'=> $user));
+    UsersController::editUser($_POST);
     header('location: /view/contact.php');
 }else if ($method == 'addGenre'){
-    $controller = new GenreController();
-
-    $genre = $controller::addGenre($_POST);
-    echo json_encode(array('success'=> $genre));
+    GenreController::addGenre($_POST);
     header('location: /view/book_genres.php');
 }else if($method == 'editGenre'){
-    $controller = new GenreController();
-
-    $genre = $controller::editGenre($_POST);
-    echo json_encode(array('success'=> $genre));
+    GenreController::editGenre($_POST);
     header('location: /view/book_genres.php');
 }else if($method == 'addBook'){
-    $controller = new BooksController();
-
-    $book = $controller::addBook($_POST);
-    echo json_encode(array('success'=> $book));
-    header('location: /');
+    BooksController::addBook($_POST);
+    header('location: /view/book_lists.php');
 }else if($method == 'editBook'){
-    $controller = new BooksController();
-
-    $book = $controller::editBook($_POST);
-    echo json_encode(array('success'=> $book));
-    header('location: /');
+    BooksController::editBook($_POST);
+    header('location: /view/book_lists.php');
+}else if ($method == 'addName'){
+    ListController::addJournal($_POST);
+    header('location: /view/users_list.php');
+}else if($method == 'returnBook'){
+    ListController::returnBook($_POST);
+    header('location: /view/users_list.php');
 }
 
 

@@ -29,4 +29,9 @@ Class Books
     {
         return $this->db->mysqliQuery("UPDATE `books` SET `name` = '".$data['name_book']."', `author` = '".$data['name_author']."', `year` = '".$data['year']."', `genre_id` = '".$data['genre']."', `updated_at` = '".date('Y-m-d H:i:s')."' WHERE `books`.`id` = '".$data['book_id']."'");
     }
+
+    public function getBooksInStock()
+    {
+        return $this->db->getData("SELECT * FROM `books` WHERE NOT EXISTS (SELECT * FROM `journal_books` WHERE `books`.`id` = `journal_books`.`book_id` AND `journal_books`.`date_return` IS NULL)");
+    }
 }
