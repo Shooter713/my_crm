@@ -26,22 +26,22 @@ $lists = ListController::index();
                     <select class="form-control" name="book_id" required>
                         <?php
                         foreach ($books as $book){ ?>
-                            <option value="<?php echo $book['id']?>"><?php echo $book['name']?></option>
+                            <option value="<?php echo $book['id']?>"><?php echo $book['name'] ?> </option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="name">Кому видано</label>
-                    <select class="form-control" name="user_id">
+                    <select class="form-control" name="user_id" required>
                         <?php
                         foreach ($users as $user){?>
-                            <option value="<?php echo $user['id'] ?>"><?php echo $user['name'] ?></option>
+                            <option value="<?php echo $user['id'] ?>"><?php echo $user['name'].' '.$user['last_name']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="date">Дата видачі</label>
-                    <input type="datetime-local" name="date" id="date" class="form-control">
+                    <input type="datetime-local" name="date" id="date" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-success">Взяти</button>
             </form>
@@ -52,7 +52,7 @@ $lists = ListController::index();
                 <div class="form-group">
                     <label for="name_book">Назва книги</label>
                     <input type="hidden" name="method_name" value="returnBook">
-                    <select class="form-control" name="journal_id">
+                    <select class="form-control" name="journal_id" required>
                         <?php foreach ($lists as $list){ ?>
                             <?php if ($list['date_return'] == null){ ?>
                                 <option value="<?php echo $list['journal_id']?>"><?php echo $list['book_name']?></option>
@@ -62,7 +62,7 @@ $lists = ListController::index();
                 </div>
                 <div class="form-group">
                     <label for="date">Дата Повернення</label>
-                    <input type="datetime-local" name="date" id="date" class="form-control">
+                    <input type="datetime-local" name="date" id="date" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-success">Повернути</button>
             </form>

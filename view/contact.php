@@ -17,19 +17,19 @@ $users = UsersController::index();
                         <input type="hidden" name="user_id" id="user_id">
                         <div class="form-group">
                             <label for="name">Введіть ім'я</label>
-                            <input type="text" name="name" placeholder="Введіть ім`я" id="name" class="form-control">
+                            <input type="text" name="name" placeholder="Введіть ім`я" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="name">Введіть прізвище</label>
-                            <input type="text" name="last_name" placeholder="Введіть прізвище" id="last_name" class="form-control">
+                            <input type="text" name="last_name" placeholder="Введіть прізвище" id="last_name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Введіть email</label>
-                            <input type="text" name="email" placeholder="Введіть email" id="email" class="form-control">
+                            <input type="text" name="email" placeholder="Введіть email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="telephone">Введіть номер телефону</label>
-                            <input name="telephone" placeholder="Введіть телефон" id="telephone" class="form-control">
+                            <input name="telephone" placeholder="Введіть телефон" id="telephone" class="form-control" required>
                         </div>
                         <button type="submit" onclick="$('#method_name').val('addUser');" class="btn btn-success" id="addNewUser">Додати</button>
                         <button type="submit" class="btn btn-info">Редагувати</button>

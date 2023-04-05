@@ -19,15 +19,15 @@ $genre = GenreController::index();
                     <label for="name">Назва книги</label>
                     <input type="hidden" name="method_name" id="method_name" value="addBook">
                     <input type="hidden" name="book_id" id="book_id">
-                    <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control">
+                    <input type="text" name="name_book" placeholder="Введіть назву книги" id="name_book" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Автор книги</label>
-                    <input type="text" name="name_author" placeholder="Введіть автора" id="name_author" class="form-control">
+                    <input type="text" name="name_author" placeholder="Введіть автора" id="name_author" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Жанр книги</label>
-                    <select type="text" name="genre" id="genre" class="form-control">
+                    <select type="text" name="genre" id="genre" class="form-control" required>
                         <?php
                         foreach ($genre as $book){ ?>
                             <option value="<?php echo $book['id']?>"><?php echo $book['name']?></option>
@@ -36,7 +36,7 @@ $genre = GenreController::index();
                 </div>
                 <div class="form-group">
                     <label for="name">Рік книги</label>
-                    <input type="text" name="year" placeholder="Введіть рік книги" id="year" class="form-control">
+                    <input type="text" name="year" placeholder="Введіть рік книги" id="year" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-success" onclick="$('#method_name').val('addBook');" id="addBook">Додати</button>
                 <button type="submit" class="btn btn-info">Редагувати</button>
