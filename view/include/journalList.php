@@ -11,7 +11,11 @@ $lists = ListController::index();
         <div>
             <li>Видано - <?php echo $list['user_name']?></li>
             <li>Назва книги - <?php echo $list['book_name']?></li>
-            <li>Дата видачі - <?php echo $list['date_issue']?></li>
+            <?php if ($list['date_return']){ ?>
+                <li>Дата повернення - <?php echo $list['date_return']?></li>
+            <?php }else{ ?>
+                <li>Дата видачі - <?php echo $list['date_issue']?></li>
+            <?php } ?>
         </div>
     </div>
 <?php } ?>
